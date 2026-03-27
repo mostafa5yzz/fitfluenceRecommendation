@@ -36,6 +36,7 @@ def get_recommendations(food_id, n_neighbors=5):
 
 @app.route('/recommend', methods=['GET'])
 def recommend():
+    print('hello')
     food_id = int(request.args.get('food_id'))
     recommendations = get_recommendations(food_id, n_neighbors=5)
     recommendations = [int(item) for item in recommendations]  # Convert to Python int
