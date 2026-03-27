@@ -40,6 +40,7 @@ def recommend():
     food_id = int(request.args.get('food_id'))
     recommendations = get_recommendations(food_id, n_neighbors=5)
     recommendations = [int(item) for item in recommendations]  # Convert to Python int
+    print("this message from the new branch")
     return jsonify(recommendations)
 
 if __name__ == '__main__':
